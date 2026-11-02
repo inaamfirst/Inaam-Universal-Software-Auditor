@@ -1,0 +1,7 @@
+interface:
+  display_name: "Inaam's Universal Software Auditor"
+  short_description: "Evidence-based software audits and documentation"
+  brand_color: "#2563EB"
+  default_prompt: "Use $inaam-universal-software-auditor to audit this project and produce evidence-based software documentation."
+policy:
+  allow_implicit_invocation: true
