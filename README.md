@@ -91,6 +91,18 @@ python scripts/validate_audit_docs.py <audit-dir>
 
 The scripts are helpers; Codex performs the source analysis and documentation synthesis using `SKILL.md` and the linked references.
 
+## Continuous integration
+
+GitHub Actions validates every push to `main`, pull request targeting `main`, and manually dispatched workflow run. The workflow tests Python 3.10 through 3.13 and checks repository structure, dependency-free `SKILL.md` frontmatter, Python compilation, inventory behavior, successful documentation validation, and rejection of an invalid documentation fixture.
+
+Run the same helper smoke tests locally with:
+
+```powershell
+python scripts/ci_smoke_test.py
+```
+
+The workflow is defined in `.github/workflows/validate-skill.yml` and uses only the official checkout and setup-python actions. It requires no third-party Python dependencies.
+
 ## Customization and extension
 
 - Update `references/audit-workflow.md` for discovery or platform-specific workflow guidance.

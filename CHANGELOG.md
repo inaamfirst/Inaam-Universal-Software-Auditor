@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Added GitHub Actions CI for pushes to `main`, pull requests targeting `main`, and manual runs.
+- Added a Python 3.10–3.13 test matrix with structural, frontmatter, compilation, and helper smoke checks.
+- Added `scripts/ci_smoke_test.py` to verify inventory behavior and documentation-validator success/failure behavior using temporary fixtures.
+- Documented local CI smoke-test execution in `README.md`.
+
 ## 2026-11-02 — GitHub-ready package prepared
 
 - Packaged the latest validated global installation as `inaam-universal-software-auditor`.
